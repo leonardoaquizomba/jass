@@ -42,7 +42,7 @@ return [
     */
 
     'models' => [
-        //'namespace' => 'App\\Models\\',
+        'namespace' => 'App\\Models\\',
     ],
 
     /*
@@ -55,7 +55,7 @@ return [
     */
 
     'storage' => [
-        'disk' => 'public',
+        'disk' => 'public_uploads',
     ],
 
     /*
@@ -104,14 +104,14 @@ return [
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'pt',
 
         /*
          * Select languages that are supported.
          */
         'locales' => [
             'en',
-            //'pt',
+            'pt',
         ],
     ],
 
