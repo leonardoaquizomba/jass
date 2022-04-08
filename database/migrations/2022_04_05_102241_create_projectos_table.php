@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string("servicos_prestados");
             $table->double("custo");
             $table->longText("imagens");
+            $table->unsignedBigInteger("projecto_categoria_id");
             $table->timestamps();
         });
     }
