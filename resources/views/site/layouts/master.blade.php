@@ -10,9 +10,9 @@
     <meta name="author" content="Jass Topografia">
     <meta name="" content="Jass Topografia">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="image/favicon.png" type="image/png" sizes="16x16">
-    <link rel="stylesheet" type="text/css" href="css/vendor.bundle.css">
-    <link id="style-css" rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="icon" href="{{ asset('image/favicon.png') }}" type="image/png" sizes="16x16">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor.bundle.css') }}">
+    <link id="style-css" rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 </head>
 
 <body class="site-body style-v1">
@@ -51,10 +51,10 @@
             <div class="container">
                 <!-- Logo -->
                 <a class="navbar-brand" href="./">
-                    <img class="logo logo-dark" alt="" src="{{ setting('site.logo') }}"
-                        srcset="{{ setting('site.logo') }} 2x">
-                    <img class="logo logo-light" alt="" src="{{ setting('site.logo') }}"
-                        srcset="{{ setting('site.logo') }} 2x">
+                    <img class="logo logo-dark" alt="" src="{{ asset(Voyager::image(setting('site.logo'))) }}"
+                        srcset="{{ asset(Voyager::image(setting('site.logo'))) }} 2x">
+                    <img class="logo logo-light" alt="" src="{{ asset(Voyager::image(setting('site.logo'))) }}"
+                        srcset="{{ asset(Voyager::image(setting('site.logo'))) }} 2x">
                 </a>
                 <!-- #end Logo -->
                 <div class="navbar-header">
@@ -217,9 +217,9 @@
     <!-- Preloader End -->
 
     <!-- JavaScript Bundle -->
-    <script src="js/jquery.bundle.js"></script>
+    <script src="{{ asset('js/jquery.bundle.js') }}"></script>
     <!-- Theme Script init() -->
-    <script src="js/script.js"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
     <!-- End script -->
 </body>
 
