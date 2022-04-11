@@ -24,6 +24,9 @@ Route::middleware("web")->name("site.")->group(function(){
     Route::get("/projectos",[SiteController::class,"projectos"])->name("projecto");
     Route::get("/contacto",[SiteController::class,"contacto"])->name("contacto");
     Route::get("/inquerito",[SiteController::class,"inquerito"])->name("inquerito");
+    Route::get("/centro-de-pesquisa",[SiteController::class,"conhecimento"])->name("conhecimento");
+    Route::get("/centro-de-pesquisa/info/{id}",[SiteController::class,"conhecimento_info"])->name("conhecimento_info");
+    Route::get("/opurtinidades",[SiteController::class,"opurtinidade"])->name("opurtinidade");
 });
 
 Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function () {

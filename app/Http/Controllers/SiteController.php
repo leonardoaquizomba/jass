@@ -24,6 +24,8 @@ class SiteController extends Controller
         if ($servico != null) {
             return view("site.servico_info",compact("servico"));
         }
+
+        return redirect()->back();
     }
 
     public function sobre()
@@ -43,5 +45,17 @@ class SiteController extends Controller
 
     public function inquerito(){
         return view("site.inquerito");
+    }
+
+    public function conhecimento(){
+        return view("site.centro_conhecimento");
+    }
+
+    public function conhecimento_info($id){
+        return view("site.centro_conhecimento_info");
+    }
+
+    public function opurtinidade(){
+        return view("site.opurtinidade");
     }
 }

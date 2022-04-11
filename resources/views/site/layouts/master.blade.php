@@ -5,6 +5,10 @@
     <title>@yield("title") - {{ setting('site.title') }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="JASS é uma Empresa Angolana, que se dedica ao desenvolvimento e integração de Sistemas de Informação Geográfica para o mercado empresarial, com a finalidade de apresentar soluções práticas e inteligentes com qualidade e confiabilidade, com vasta experiência no domínio das geociências como (Geodesia, Topografia, Cartografia, Teledeteção, Fotogrametria e Sistema de Informação Geográfica).">
+    <meta name="author" content="Jass Topografia">
+    <meta name="" content="Jass Topografia">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="image/favicon.png" type="image/png" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="css/vendor.bundle.css">
@@ -20,10 +24,10 @@
                 <div class="row">
                     <div class="top-aside top-left">
                         <ul class="top-nav">
-                            <li><a href="#">Centro de conhecimento</a></li>
-                            <li><a href="#">Carreira / Empregos</a></li>
+                            <li><a href="{{ route('site.conhecimento') }}">Centro de Pesquisa</a></li>
+                            <li><a href="{{ route('site.opurtinidade') }}">Carreira / Empregos</a></li>
                             <li><a href="#">Notícias</a></li>
-                            <li><a href="{{ route("site.contacto") }}">Contato</a></li>
+                            <li><a href="{{ route('site.contacto') }}">Contato</a></li>
                         </ul>
                     </div>
                     <div class="clearfix top-aside top-right">
@@ -68,11 +72,12 @@
                 <nav class="navbar-collapse collapse" id="mainnav">
                     <ul class="nav navbar-nav">
                         <li><a href="/">Home</a></li>
-                        <li><a href="{{ route("site.sobre") }}">Sobre nós</a></li>
-                        <li><a href="{{ route("site.servico") }}">Serviço</a></li>
-                        <li><a href="{{ route("site.projecto") }}">Projetos</a></li>
-                        <li><a href="{{ route("site.contacto") }}">Contacte-nos</a></li>
-                        <li class="quote-btn"><a class="btn" href="{{ route("site.inquerito") }}">Informe-se hoje</a></li>
+                        <li><a href="{{ route('site.sobre') }}">Sobre nós</a></li>
+                        <li><a href="{{ route('site.servico') }}">Serviço</a></li>
+                        <li><a href="{{ route('site.projecto') }}">Projetos</a></li>
+                        <li><a href="{{ route('site.contacto') }}">Contacte-nos</a></li>
+                        <li class="quote-btn"><a class="btn" href="{{ route('site.inquerito') }}">Informe-se hoje</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -91,7 +96,7 @@
                     <div class="cta-sameline">
                         <h3>Procurando uma solução adequada para sua empresa?</h3>
                         <p>Contacte-nos hoje para consulta gratuita ou mais informações.</p>
-                        <a class="btn btn-outline" href="{{ route("site.contacto") }}">Entrar em contato</a>
+                        <a class="btn btn-outline" href="{{ route('site.contacto') }}">Entrar em contato</a>
                     </div>
 
                 </div>
