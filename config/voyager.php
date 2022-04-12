@@ -55,7 +55,7 @@ return [
     */
 
     'storage' => [
-        'disk' => 'public_uploads',
+        'disk' => env('FILESYSTEM_DISK', 'local'),
     ],
 
     /*
