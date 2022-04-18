@@ -32,7 +32,11 @@
                     <div class="feature boxed">
                         <a href="{{ route('site.servico_info', ['id' => $servico->id]) }}">
                             <div class="fbox-photo">
-                                <img src="image/photo-sm-main-a.jpg" alt="">
+                                <img src="@if ($servico->imagem == null)
+                                    {{ asset('image/photo-sm-main-a.jpg') }}
+                                    @else
+                                        {{ asset(Voyager::image($servico->imagem)) }}
+                                @endif" alt="">
                             </div>
                         </a>
                         <div class="fbox-content">
@@ -43,8 +47,7 @@
                             <p>
                                 {!! Str::limit($servico->descricao, 300) !!}
                             </p>
-                            <p><a href="{{ route('site.servico_info', ['id' => $servico->id]) }}"
-                                    class="btn-link">Saiba
+                            <p><a href="{{ route('site.servico_info', ['id' => $servico->id]) }}" class="btn-link">Saiba
                                     mais</a></p>
                         </div>
                     </div>

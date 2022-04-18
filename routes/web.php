@@ -22,6 +22,7 @@ Route::middleware("web")->name("site.")->group(function(){
     Route::get("/servicos",[SiteController::class,"servicos"])->name("servico");
     Route::get("/servico/{id}",[SiteController::class,"servico_info"])->name("servico_info");
     Route::get("/projectos",[SiteController::class,"projectos"])->name("projecto");
+    Route::get("/projecto/{id}",[SiteController::class,"projecto_info"])->name("projecto_info");
     Route::get("/contacto",[SiteController::class,"contacto"])->name("contacto");
     Route::get("/inquerito",[SiteController::class,"inquerito"])->name("inquerito");
     Route::get("/centro-de-pesquisa",[SiteController::class,"conhecimento"])->name("conhecimento");

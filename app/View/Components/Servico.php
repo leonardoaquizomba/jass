@@ -2,10 +2,13 @@
 
 namespace App\View\Components;
 
+use App\Models\Servico as ModelsServico;
 use Illuminate\View\Component;
 
 class Servico extends Component
 {
+    public $servicos;
+
     /**
      * Create a new component instance.
      *
@@ -13,7 +16,7 @@ class Servico extends Component
      */
     public function __construct()
     {
-        //
+        $this->servicos = ModelsServico::get()->take(6);
     }
 
     /**

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Projecto;
 use App\Models\Servico;
 use Illuminate\Http\Request;
 
@@ -36,6 +37,17 @@ class SiteController extends Controller
     public function projectos()
     {
         return view("site.projecto");
+    }
+
+    public function projecto_info($id)
+    {
+        $projecto = Projecto::where('id',$id)->first();
+
+        if(is_null($projecto)){
+            return redirect()->back();
+        }
+
+        return view("site.projecto_info",compact("projecto"));
     }
 
     public function contacto()

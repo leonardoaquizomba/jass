@@ -10,15 +10,13 @@
     <meta name="author" content="Jass Topografia">
     <meta name="" content="Jass Topografia">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="icon" href="{{ asset('image/favicon.png') }}" type="image/png" sizes="16x16">
+    <link rel="icon" href="{{ asset(Voyager::image(setting('site.icon'))) }}" type="image/png" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor.bundle.css') }}">
     <link id="style-css" rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 </head>
 
 <body class="site-body style-v1">
-    <!-- Header -->
     <header class="site-header header-s1 is-sticky">
-        <!-- Topbar -->
         <div class="topbar">
             <div class="container">
                 <div class="row">
@@ -45,18 +43,14 @@
                 </div>
             </div>
         </div>
-        <!-- #end Topbar -->
-        <!-- Navbar -->
         <div class="navbar navbar-primary">
             <div class="container">
-                <!-- Logo -->
                 <a class="navbar-brand" href="./">
                     <img class="logo logo-dark" alt="" src="{{ asset(Voyager::image(setting('site.logo'))) }}"
                         srcset="{{ asset(Voyager::image(setting('site.logo'))) }} 2x">
                     <img class="logo logo-light" alt="" src="{{ asset(Voyager::image(setting('site.logo'))) }}"
                         srcset="{{ asset(Voyager::image(setting('site.logo'))) }} 2x">
                 </a>
-                <!-- #end Logo -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mainnav"
                         aria-expanded="false">
@@ -65,10 +59,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <!-- Q-Button for Mobile -->
                     <div class="quote-btn"><a class="btn" href="#">Informe-se hoje</a></div>
                 </div>
-                <!-- MainNav -->
                 <nav class="navbar-collapse collapse" id="mainnav">
                     <ul class="nav navbar-nav">
                         <li><a href="/">Home</a></li>
@@ -84,10 +76,7 @@
         </div>
         @yield("Slider")
     </header>
-
     @yield("content")
-
-    <!-- Call Action -->
     <div class="call-action bg-primary">
         <div class="cta-block">
             <div class="container">
@@ -103,16 +92,11 @@
             </div>
         </div>
     </div>
-    <!-- End Section -->
-
-    <!-- Footer Widget-->
     <div class="footer-widget section-pad">
         <div class="container">
             <div class="row">
-
                 <div class="widget-row row">
                     <div class="footer-col col-md-5 col-sm-6 res-m-bttm">
-                        <!-- Each Widget -->
                         <div class="wgs wgs-footer wgs-menu">
                             <h5 class="wgs-title">Soluções</h5>
                             <div class="wgs-content">
@@ -122,14 +106,11 @@
                                     @empty
 
                                     @endforelse
-
                                 </ul>
                             </div>
                         </div>
-                        <!-- End Widget -->
                     </div>
                     <div class="footer-col col-md-2 col-sm-6 res-m-bttm">
-                        <!-- Each Widget -->
                         <div class="wgs wgs-footer wgs-menu">
                             <h5 class="wgs-title">Links</h5>
                             <div class="wgs-content">
@@ -141,10 +122,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- End Widget -->
                     </div>
                     <div class="footer-col col-md-2 col-sm-6 res-m-bttm">
-                        <!-- Each Widget -->
                         <div class="wgs wgs-footer wgs-text">
                             <h5 class="wgs-title">Áreas de Atendimento</h5>
                             <div class="wgs-content">
@@ -158,10 +137,8 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- End Widget -->
                     </div>
                     <div class="footer-col col-md-3 col-sm-6">
-                        <!-- Each Widget -->
                         <div class="wgs wgs-footer">
                             <h5 class="wgs-title">Contate-nos</h5>
                             <div class="wgs-content">
@@ -177,17 +154,11 @@
                                 </ul>
                             </div>
                         </div>
-                        <!-- End Widget -->
                     </div>
-
                 </div>
-
             </div>
         </div>
     </div>
-    <!-- End Footer Widget -->
-
-    <!-- Copyright -->
     <div class="copyright">
         <div class="container">
             <div class="row">
@@ -196,31 +167,17 @@
                             class="sep"> . </span> <a href="#">Termos e Condições</a></p>
                 </div>
                 <div class="site-by col-sm-5 al-right">
-
                 </div>
-
             </div>
         </div>
     </div>
-    <!-- End Copyright -->
-
-    <!-- Rreload Image for Slider -->
     <div class="preload hide">
         <img alt="" src="image/slider-oil-a.jpg">
         <img alt="" src="image/slider-welding-b.jpg">
         <img alt="" src="image/slider-mine-a.jpg">
     </div>
-    <!-- End -->
-
-    <!-- Preloader !active please if you want -->
-    <!-- <div id="preloader"><div id="status">&nbsp;</div></div> -->
-    <!-- Preloader End -->
-
-    <!-- JavaScript Bundle -->
     <script src="{{ asset('js/jquery.bundle.js') }}"></script>
-    <!-- Theme Script init() -->
     <script src="{{ asset('js/script.js') }}"></script>
-    <!-- End script -->
 </body>
 
 </html>

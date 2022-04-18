@@ -2,10 +2,12 @@
 
 namespace App\View\Components;
 
+use App\Models\Slider;
 use Illuminate\View\Component;
 
 class Sliders extends Component
 {
+    public $sliders;
     /**
      * Create a new component instance.
      *
@@ -13,7 +15,7 @@ class Sliders extends Component
      */
     public function __construct()
     {
-        //
+        $this->sliders = Slider::get();
     }
 
     /**
