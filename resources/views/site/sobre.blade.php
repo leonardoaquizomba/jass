@@ -108,49 +108,7 @@
 
                 <div class="col-md-4">
                     <div class="sidebar-right">
-                        <div class="wgs-box wgs-quoteform">
-                            <h3 class="wgs-heading">Contato rápido</h3>
-                            <div class="wgs-content">
-                                <p>Se você tiver alguma dúvida ou quiser marcar uma sessão, entre em contato conosco.
-                                </p>
-                                <form id="contact-us" class="form-quote">
-                                    <div class="form-results"></div>
-                                    <div class="form-group">
-                                        <div class="form-field">
-                                            <input name="contact-name" type="text" placeholder="Nome *"
-                                                class="form-control required">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-field">
-                                            <input name="contact-email" type="email" placeholder="Email *"
-                                                class="form-control required email">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-field form-m-bttm">
-                                            <input name="contact-phone" type="text" placeholder="Telefone"
-                                                class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-field">
-                                            <input name="contact-service" type="text" placeholder="Interesse do serviço"
-                                                class="form-control">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="form-field">
-                                            <textarea name="contact-message" placeholder="Mensagem *"
-                                                class="txtarea form-control required"></textarea>
-                                        </div>
-                                    </div>
-                                    <input type="text" class="hidden" name="form-anti-honeypot" value="">
-                                    <button type="submit" class="btn btn-alt sb-h">Enviar</button>
-                                </form>
-                            </div>
-                        </div>
-
+                        <livewire:contacto-rapido />
                     </div>
                 </div>
             </div>

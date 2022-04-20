@@ -3,7 +3,6 @@
 @section("title","Centro de Pesquisa")
 
 @section("Slider")
-<!-- Banner -->
 <div class="banner banner-static">
     <div class="container">
         <div class="content row">
@@ -15,11 +14,9 @@
         </div>
     </div>
 </div>
-<!-- End Banner -->
 @endsection
 
 @section("content")
-<!-- Content -->
 <div class="section section-contents section-products section-pad">
     <div class="container">
         <div class="content row">
@@ -31,27 +28,33 @@
             </div>
             <div class="gallery gallery-products with-caption hover-fade center mgfix">
                 <ul class="photos-list col-x3">
+                    @forelse (App\Models\Pesquisa::all() as $pesquisa)
                     <li>
                         <div class="photo">
-                            <img src="image/product-sm-a.jpg" alt="">
+                            <img src="@if ($pesquisa->imagem == null)
+                                    {{ asset('image/product-sm-a.jpg') }}
+                                    @else
+                                        {{ asset(Voyager::image($pesquisa->imagem)) }}
+                                @endif" alt="">
                             <div class="photo-link">
                                 <span class="links">
-                                    <a class="btn more-link" href="{{ route('site.conhecimento_info', ['id'=>1])
-                                        }}">View Product</a>
+                                    <a class="btn more-link" href="{{ route('site.conhecimento_info', ['id'=>$pesquisa->id])
+                                                                                    }}">Ver Informações</a>
                                 </span>
                             </div>
                         </div>
                         <div class="photo-caption">
-                            <a href="{{ route('site.conhecimento_info', ['id'=>1]) }}">
-                                <h4>Hydraulic Power</h4>
+                            <a href="{{ route('site.conhecimento_info', ['id'=>$pesquisa->id]) }}">
+                                <h4>{{ $pesquisa->titulo }}</h4>
                             </a>
                         </div>
                     </li>
+                    @empty
+
+                    @endforelse
                 </ul>
             </div>
-            <!-- End Products -->
         </div>
     </div>
 </div>
-<!-- End Content -->
 @endsection

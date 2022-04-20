@@ -13,6 +13,7 @@
     <link rel="icon" href="{{ asset(Voyager::image(setting('site.icon'))) }}" type="image/png" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor.bundle.css') }}">
     <link id="style-css" rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    @livewireStyles
 </head>
 
 <body class="site-body style-v1">
@@ -178,6 +179,7 @@
     </div>
     <script src="{{ asset('js/jquery.bundle.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
+    @livewireScripts
 </body>
 
 </html>

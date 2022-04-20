@@ -2,9 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use Livewire\Component;
-
-class ContactoRapido extends Component
+class ContactoRapido extends Contacto
 {
     public function render()
     {

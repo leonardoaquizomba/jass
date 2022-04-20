@@ -1,7 +1,7 @@
 <div>
     @if ($showMensagem)
     <p class="text-center">{{ $mensagem }}</p>
-    @endif
+    @else
     <form id="contact-us" class="form-message">
         @csrf
         <div class="form-results"></div>
@@ -37,7 +37,8 @@
             </div>
         </div>
         <input type="text" class="hidden" name="form-anti-honeypot" value="">
-        <button type="button" wire:click='salvar' wire:loading.attr='disabled'
+        <button type="submit" wire:click='submit' wire:loading.attr='disabled'
             class="btn solid-btn sb-h">Enviar</button>
     </form>
+    @endif
 </div>

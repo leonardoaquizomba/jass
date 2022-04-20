@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('inqueritos', function (Blueprint $table) {
             $table->id();
+            $table->string('nome');
+            $table->string('empresa')->nullable();
+            $table->string('email');
+            $table->string('telefone');
+            $table->string('servicos');
+            $table->string('hora');
+            $table->string('by');
+            $table->longText('texto');
             $table->timestamps();
         });
     }
