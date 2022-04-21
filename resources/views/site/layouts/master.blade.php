@@ -12,7 +12,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="icon" href="{{ asset(Voyager::image(setting('site.icon'))) }}" type="image/png" sizes="16x16">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/vendor.bundle.css') }}">
-    <link id="style-css" rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link id="style-css" rel="stylesheet" type="text/css" href="{{ asset('css/style-red.css') }}">
     @livewireStyles
 </head>
 
