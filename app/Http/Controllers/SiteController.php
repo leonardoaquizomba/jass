@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pesquisa;
 use App\Models\Projecto;
 use App\Models\Servico;
 use Illuminate\Http\Request;
@@ -64,7 +65,13 @@ class SiteController extends Controller
     }
 
     public function conhecimento_info($id){
-        return view("site.centro_conhecimento_info");
+
+        $pesquisa = Pesquisa::where('id',$id)->first();
+        if (is_null($pesquisa)) {
+            return redirect()->back();
+        }
+
+        return view("site.centro_conhecimento_info",compact('pesquisa'));
     }
 
     public function opurtinidade(){
