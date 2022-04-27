@@ -1,7 +1,8 @@
 <div id="slider" class="banner banner-slider carousel slide carousel-fade">
     <div class="carousel-inner">
+        @php $isActive = "active" @endphp
         @forelse ($sliders as $slider)
-        <div class="item active">
+        <div class="item {{ $isActive }}">
             <div class="fill" style="background-image:url('{{ asset(Voyager::image($slider->image)) }}');">
                 <div class="banner-content">
                     <div class="container">
@@ -17,6 +18,7 @@
                 </div>
             </div>
         </div>
+        @php $isActive = "" @endphp
         @empty
 
         @endforelse
