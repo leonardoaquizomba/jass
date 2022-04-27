@@ -9,24 +9,28 @@
 @section("content")
 <x-servico />
 
-<!--Content  -->
 <div class="bg-light section-pad">
     <div class="container">
         <div class="content row">
 
             <div class="wide-sm center">
                 <h1>Um provedor de serviços de alto nível recomendado para qualquer empresa, firma ou indústria.</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a enim aliquam, condimentum nisl a,
-                    laoreet lectus. Aliquam convallis sed elit nec vehicula. Praesent gravida, massa sit amet
-                    ullamcorper fringilla, tortor nunc ultrices dui porttitor mi non, elementum dui.</p>
+                <p>
+                    Complementarmente a estas atividades assegura ainda o estudo de projetos e sua otimização,
+                    assessoria técnica
+                    especializada, legalização, licenciamento e coordenação de obra.
+                    Os nossos principais objetivos enquanto empresa são garantir a Qualidade do trabalho e a Satisfação
+                    do cliente, pelo que
+                    nos regemos pela Excelência, Paixão, Honestidade, Compromisso e Disponibilidade, valores
+                    estruturantes que consideramos
+                    essenciais no cumprimento destes mesmos objetivos.
+                </p>
             </div>
 
         </div>
     </div>
 </div>
-<!-- End conetnt -->
 
-<!-- Content -->
 <div class="section section-about section-pad">
     <div class="container">
         <div class="content row">
@@ -34,26 +38,23 @@
             <div class="row row-vm">
                 <div class="col-md-6 res-m-bttm">
                     <h2>Somos uma equipe de profissionais que construirão tudo para você</h2>
-                    <p>Vivamus finibus accumsan ultricies orem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                        eleifend consequat metus, ac egestas tortor placerat vehicula. Nulla tincidunt risus nisl, sed
-                        iaculis elit dapibus id. Suspendisse quis lorem nibh. Fusce a magna sollicitudin, semper justo a
-                        sagittis.</p>
-                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curay. Fusce a
-                        magna sollicitudin, semper justo a sagittis est. Vestibulum ante ipsum primis in faucibus orci
-                        luctus et ultrices posuere cubilia curay.</p>
+                    <p>
+                        Uma equipe composta por um corpo técnico extremamente competente, que coleciona uma bagagem
+                        enorme tanto em conhecimento
+                        quanto em números.
+                    </p>
                 </div>
                 <div class="col-md-5 col-md-offset-1">
-                    <img src="image/photo-sm-main-g.jpg" alt="">
+                    <img src="{{ asset('image/photo-sm-main-g.jpg') }}" alt="">
                 </div>
             </div>
 
         </div>
     </div>
 </div>
-<!-- End content -->
 
-<!-- CTA-Parallax -->
-<div class="call-action has-parallax cta-large" style="background-image: url('image/plx-dark-default.jpg');">
+<div class="call-action has-parallax cta-large"
+    style="background-image: url('{{ asset('image/plx-dark-default.jpg') }}');">
     <div class="cta-block">
         <div class="container">
             <div class="content row">
@@ -66,9 +67,7 @@
         </div>
     </div>
 </div>
-<!-- End Section -->
 
-<!-- Call Action -->
 <div class="call-action cta-small">
     <div class="cta-block">
         <div class="container">
@@ -83,11 +82,9 @@
         </div>
     </div>
 </div>
-<!-- End Section -->
 
 <x-projecto />
 
-<!-- Testimonials -->
 <div class="section section-quotes section-pad bg-light">
     <div class="container">
         <div class="content row">
@@ -142,7 +139,6 @@
         </div>
     </div>
 </div>
-<!-- End Section -->
 
 <x-noticia />
 

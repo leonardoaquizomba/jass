@@ -2,18 +2,16 @@
 
 namespace App\View\Components;
 
+use App\Models\Parceiro as ModelsParceiro;
 use Illuminate\View\Component;
 
 class Parceiro extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
+    public $parceiros;
+
     public function __construct()
     {
-        //
+        $this->parceiros = ModelsParceiro::get();
     }
 
     /**

@@ -3,17 +3,16 @@
 namespace App\View\Components;
 
 use Illuminate\View\Component;
+use TCG\Voyager\Models\Post;
 
 class Noticia extends Component
 {
-    /**
-     * Create a new component instance.
-     *
-     * @return void
-     */
+    public $noticias;
+
+
     public function __construct()
     {
-        //
+        $this->noticias = Post::get()->take(3);
     }
 
     /**
