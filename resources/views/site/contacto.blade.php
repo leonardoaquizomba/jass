@@ -8,7 +8,7 @@
         <div class="content row">
 
             <div class="imagebg">
-                <img src="image/banner-contact.jpg" alt="">
+                <img src="{{ asset('image/c.jpg') }}" alt="">
             </div>
         </div>
     </div>

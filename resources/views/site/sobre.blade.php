@@ -9,7 +9,7 @@
         <div class="content row">
 
             <div class="imagebg">
-                <img src="image/banner-inside-d.jpg" alt="">
+                <img src="{{ asset('image/muertos-crew.jpg') }}" alt="">
             </div>
 
         </div>

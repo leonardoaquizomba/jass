@@ -8,7 +8,7 @@
         <div class="content row">
 
             <div class="imagebg">
-                <img src="image/banner-inside-f.jpg" alt="">
+                <img src="{{ asset('image/andrea-piacquadio.jpg') }}" alt="">
             </div>
 
         </div>
@@ -21,7 +21,7 @@
     <div class="container">
         <div class="content row">
 
-            <div class="wide-sm text-center">
+            <div class="text-center wide-sm">
                 <h1>Nossos Projectos</h1>
                 <p>Nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat do eiusmod tempor
                     incidid. Adipiscing elit sed do eiusmod tempor incididunt bore eter dolore magna aliqua.</p>

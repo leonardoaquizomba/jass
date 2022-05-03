@@ -45,7 +45,7 @@
                     </p>
                 </div>
                 <div class="col-md-5 col-md-offset-1">
-                    <img src="{{ asset('image/photo-sm-main-g.jpg') }}" alt="">
+                    <img src="{{ asset('image/anamul-rezwan.jpg') }}" alt="">
                 </div>
             </div>
 
@@ -53,8 +53,7 @@
     </div>
 </div>
 
-<div class="call-action has-parallax cta-large"
-    style="background-image: url('{{ asset('image/plx-dark-default.jpg') }}');">
+<div class="call-action has-parallax cta-large" style="background-image: url('{{ asset('image/anete-lusina.jpg') }}');">
     <div class="cta-block">
         <div class="container">
             <div class="content row">
