@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
 <head>
-    <title>@yield("title") - {{ setting('site.title') }}</title>
+    <title>@yield('title') - {{ setting('site.title') }}</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description"
@@ -31,13 +31,40 @@
                     </div>
                     <div class="clearfix top-aside top-right">
                         <ul class="clearfix top-contact">
-                            <li class="t-email t-email1">
-                                <em class="fa fa-envelope-o" aria-hidden="true"></em>
-                                <span><a href="#">{{ setting('site.email') }}</a></span>
+                            <li>
+                                <span>
+                                    <a target="_blank" href="{{ setting('site.facebook') }}">
+                                        <em class="fa fa-facebook" aria-hidden="true"></em>
+                                    </a>
+                                </span>
                             </li>
-                            <li class="t-phone t-phone1">
-                                <em class="fa fa-phone" aria-hidden="true"></em>
-                                <span>{{ setting('site.telefone') }}</span>
+                            <li>
+                                <span>
+                                    <a target="_blank" href="{{ setting('site.instagram') }}">
+                                        <em class="fa fa-instagram" aria-hidden="true"></em>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a target="_blank" href="{{ setting('site.linkedin') }}">
+                                        <em class="fa fa-linkedin" aria-hidden="true"></em>
+                                    </a>
+                                </span>
+                            </li>
+                            <li>
+                                <span>
+                                    <a target="_blank" href="{{ setting('site.whatsapp') }}">
+                                        <em class="fa fa-whatsapp" aria-hidden="true"></em>
+                                    </a>
+                                </span>
+                            </li>
+                            <li class="t-email t-email1">
+                                <span>
+                                    <a target="_blank" href="mailto:{{ setting('site.email') }}">
+                                        <em class="fa fa-envelope" aria-hidden="true"></em>
+                                    </a>
+                                </span>
                             </li>
                         </ul>
                     </div>
@@ -60,24 +87,27 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <div class="quote-btn"><a class="btn" href="#">Informe-se hoje</a></div>
+                    <div class="quote-btn"><a style="background-color: #8a8c8e" class="btn" href="#">Informe-se
+                            hoje</a></div>
                 </div>
                 <nav class="navbar-collapse collapse" id="mainnav">
                     <ul class="nav navbar-nav">
-                        <li><a href="/">Home</a></li>
+                        <li><a href="/">Inicio</a></li>
                         <li><a href="{{ route('site.sobre') }}">Sobre nós</a></li>
                         <li><a href="{{ route('site.servico') }}">Serviço</a></li>
                         <li><a href="{{ route('site.projecto') }}">Projetos</a></li>
                         <li><a href="{{ route('site.contacto') }}">Contacte-nos</a></li>
-                        <li class="quote-btn"><a class="btn" href="{{ route('site.inquerito') }}">Informe-se hoje</a>
+                        <li class="quote-btn"><a style="background-color: #8a8c8e" class="btn"
+                                href="{{ route('site.inquerito') }}">Informe-se
+                                hoje</a>
                         </li>
                     </ul>
                 </nav>
             </div>
         </div>
-        @yield("Slider")
+        @yield('Slider')
     </header>
-    @yield("content")
+    @yield('content')
     <div class="call-action bg-primary">
         <div class="cta-block">
             <div class="container">
@@ -103,9 +133,8 @@
                             <div class="wgs-content">
                                 <ul class="menu col-md-8 npl">
                                     @forelse (App\Models\Servico::all("nome") as $servico)
-                                    <li><a href="#">{{ $servico->nome }}</a></li>
+                                        <li><a href="#">{{ $servico->nome }}</a></li>
                                     @empty
-
                                     @endforelse
                                 </ul>
                             </div>
@@ -116,7 +145,7 @@
                             <h5 class="wgs-title">Links</h5>
                             <div class="wgs-content">
                                 <ul class="menu">
-                                    <li><a href="/">Home</a></li>
+                                    <li><a href="/">Inicio</a></li>
                                     <li><a href="#">Sobre nós</a></li>
                                     <li><a href="#">News</a></li>
                                     <li><a href="#">Contate-nos</a></li>
@@ -149,9 +178,14 @@
                                     <span>Email</span>: {{ setting('site.email') }}
                                 </p>
                                 <ul class="social">
-                                    <li><a href="#"><em class="fa fa-facebook" aria-hidden="true"></em></a></li>
-                                    <li><a href="#"><em class="fa fa-twitter" aria-hidden="true"></em></a></li>
-                                    <li><a href="#"><em class="fa fa-linkedin" aria-hidden="true"></em></a></li>
+                                    <li><a target="_blank" href="{{ setting('site.facebook') }}"><em
+                                                class="fa fa-facebook" aria-hidden="true"></em></a></li>
+                                    <li><a target="_blank" href="{{ setting('site.instagram') }}"><em
+                                                class="fa fa-instagram" aria-hidden="true"></em></a></li>
+                                    <li><a target="_blank" href="{{ setting('site.linkedin') }}"><em
+                                                class="fa fa-linkedin" aria-hidden="true"></em></a></li>
+                                    <li><a target="_blank" href="{{ setting('site.whatsapp') }}"><em
+                                                class="fa fa-whatsapp" aria-hidden="true"></em></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -164,7 +198,7 @@
         <div class="container">
             <div class="row">
                 <div class="site-copy col-sm-7">
-                    <p>&copy; 2017 {{ setting('site.title') }} <span class="sep"> . </span> Licensed NI099999<span
+                    <p>&copy; 2017 {{ setting('site.title') }} <span class="sep"> . </span> Licensed <span
                             class="sep"> . </span> <a href="#">Termos e Condições</a></p>
                 </div>
                 <div class="site-by col-sm-5 al-right">

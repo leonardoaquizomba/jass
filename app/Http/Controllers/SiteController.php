@@ -21,10 +21,10 @@ class SiteController extends Controller
 
     public function servico_info($id)
     {
-        $servico = Servico::where("id",$id)->first();
+        $servico = Servico::where("id", $id)->first();
 
         if ($servico != null) {
-            return view("site.servico_info",compact("servico"));
+            return view("site.servico_info", compact("servico"));
         }
 
         return redirect()->back();
@@ -42,13 +42,13 @@ class SiteController extends Controller
 
     public function projecto_info($id)
     {
-        $projecto = Projecto::where('id',$id)->first();
+        $projecto = Projecto::where('id', $id)->first();
 
-        if(is_null($projecto)){
+        if (is_null($projecto)) {
             return redirect()->back();
         }
 
-        return view("site.projecto_info",compact("projecto"));
+        return view("site.projecto_info", compact("projecto"));
     }
 
     public function contacto()
@@ -56,25 +56,29 @@ class SiteController extends Controller
         return view("site.contacto");
     }
 
-    public function inquerito(){
+    public function inquerito()
+    {
         return view("site.inquerito");
     }
 
-    public function conhecimento(){
+    public function conhecimento()
+    {
         return view("site.centro_conhecimento");
     }
 
-    public function conhecimento_info($id){
+    public function conhecimento_info($id)
+    {
 
-        $pesquisa = Pesquisa::where('id',$id)->first();
+        $pesquisa = Pesquisa::where('id', $id)->first();
         if (is_null($pesquisa)) {
             return redirect()->back();
         }
 
-        return view("site.centro_conhecimento_info",compact('pesquisa'));
+        return view("site.centro_conhecimento_info", compact('pesquisa'));
     }
 
-    public function opurtinidade(){
+    public function opurtinidade()
+    {
         return view("site.opurtinidade");
     }
 }
